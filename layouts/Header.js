@@ -351,11 +351,8 @@ const Header5 = ({ onePage }) => {
             </div>
             {/* Menu Button */}
             <div className="menu-btns ms-lg-auto">
-              <Link href="cantact" className="light-btn">
-                Sign Up
-              </Link>
               <Link href="contact" className="theme-btn">
-                Get Started <i className="far fa-arrow-right" />
+                Book a consultation <i className="far fa-arrow-right" />
               </Link>
             </div>
           </div>

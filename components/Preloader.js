@@ -1,13 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Preloader = () => {
-  const [load, setLoad] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoad(false);
-    }, 1000);
-  }, []);
+  const [load, setLoad] = useState(false);
   return (
     <div className="preloader" style={{ display: load ? "flex" : "none" }}>
       <div className="custom-loader" />

@@ -30,7 +30,7 @@ const page = () => {
               </div>
             </div>
             <Link href="contact" className="theme-btn">
-              Sign Up For Free <i className="far fa-arrow-right" />
+              Book a consultation <i className="far fa-arrow-right" />
             </Link>
           </div>
         </div>
@@ -50,8 +50,7 @@ const page = () => {
         <div className="container">
           <div className="section-title text-center mb-50">
             <h4>
-              I’ve <span>1253+</span> Global Clients &amp; lot’s of Project
-              Complete
+              Partnered with over{""} <span>15+</span> Agencies &amp; Businesses
             </h4>
           </div>
           <div className="row justify-content-center">
@@ -135,10 +134,9 @@ const page = () => {
             <div className="col-xl-7 col-lg-9 col-md-11">
               <div className="section-title text-center mb-55">
                 <span className="subtitle-one style-two mb-20">
-                  <i className="fas fa-rocket-launch" /> Best Communication
-                  System
+                  {/* <i className="fas fa-rocket-launch" /> World Class Support */}
                 </span>
-                <h2>Support your customers on their preferred channels</h2>
+                <h2>We help power your spreadsheets</h2>
               </div>
             </div>
           </div>
@@ -147,13 +145,15 @@ const page = () => {
               <div className="feature-image-box">
                 <div className="image">
                   <img
-                    src="assets/images/services/feature1.png"
+                    src="https://media.licdn.com/dms/image/D4D12AQFZF31wF_MOGQ/article-cover_image-shrink_720_1280/0/1684315532338?e=2147483647&v=beta&t=qKqYcysmUa8eaeaBT8p4F392C8VAuUCOjA0eE4WGb_Q"
                     alt="Feature"
                   />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Share Inbox</Link>
+                    <Link href="service-details">
+                      Data visualization and analysis
+                    </Link>
                   </h5>
                   <p>
                     Sed uterspiciatis unde omnis natus error voluptatem
@@ -166,13 +166,14 @@ const page = () => {
               <div className="feature-image-box">
                 <div className="image">
                   <img
-                    src="assets/images/services/feature2.png"
+                    style={{ objectFit: "contain" }}
+                    src="https://nanonets.com/blog/content/images/2023/08/Pivot-Table-Example-for-Excel-Automation.png"
                     alt="Feature"
                   />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Custom Analytics</Link>
+                    <Link href="service-details">Process Automation</Link>
                   </h5>
                   <p>
                     Quis autem vel eumiure reprehenderit qui in ea voluptate
@@ -185,13 +186,13 @@ const page = () => {
               <div className="feature-image-box">
                 <div className="image">
                   <img
-                    src="assets/images/services/feature3.png"
+                    src="https://images.ctfassets.net/lzny33ho1g45/6scPSxCdwNFMjunqSjtZKw/c1c94e86a6aaf07a7ab9d13305994cef/automate-microsoft-excel-00-hero.jpg?w=1520&fm=jpg&q=30&fit=thumb&h=760"
                     alt="Feature"
                   />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Contacts CRM</Link>
+                    <Link href="service-details">And More</Link>
                   </h5>
                   <p>
                     To take a trivial example, which of us ever undertakes
@@ -431,9 +432,7 @@ const page = () => {
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">
-                      Proactive Blocklist Tracking
-                    </Link>
+                    <Link href="service-details">Modern Analysis Tools</Link>
                   </h5>
                   <p>
                     Sed ut perspiciatis unde omnis iste natus doloremque
