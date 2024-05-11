@@ -3,7 +3,7 @@ import Counter from "@/components/Counter";
 import AkpagerLayout from "@/layouts/AkpagerLayout";
 import { sliderProps } from "@/utility/sliderProps";
 import Link from "next/link";
-import { Nav, Tab } from "react-bootstrap";
+import { Tab } from "react-bootstrap";
 import Slider from "react-slick";
 const page = () => {
   return (
@@ -136,7 +136,7 @@ const page = () => {
                 <span className="subtitle-one style-two mb-20">
                   {/* <i className="fas fa-rocket-launch" /> World Class Support */}
                 </span>
-                <h2>We help power your spreadsheets</h2>
+                <h2>Power your spreadsheets</h2>
               </div>
             </div>
           </div>
@@ -222,46 +222,32 @@ const page = () => {
               <div className="tap-five-content rmb-55">
                 <div className="section-title pt-10 mb-55">
                   <span className="subtitle-one style-three mb-20">
-                    <i className="fas fa-rocket-launch" /> Best Custom Saas to
-                    you
+                    {/* <i className="fas fa-rocket-launch" /> Best Custom Saas to
+                    you */}
                   </span>
-                  <h2>Leverage our APIs to build your custom apps</h2>
+                  <h2>
+                    Modernize your spreadsheets to get ahead of your competitors
+                  </h2>
                 </div>
                 <Tab.Container defaultActiveKey={"tabFour1"}>
-                  <Nav
-                    as={"ul"}
-                    className="nav advanced-tab style-four mb-40"
-                    role="tablist"
-                  >
-                    <Nav.Item as={"li"}>
-                      <Nav.Link as={"button"} eventKey="tabFour1">
-                        Data Analyze
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as={"li"}>
-                      <Nav.Link as={"button"} eventKey="tabFour2">
-                        Collaborate
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as={"li"}>
-                      <Nav.Link as={"button"} eventKey="tabFour3">
-                        Easy &amp; secure
-                      </Nav.Link>
-                    </Nav.Item>
-                  </Nav>
                   <Tab.Content className="tab-content">
                     <Tab.Pane className="tab-pane fade" eventKey="tabFour1">
                       <p>
-                        Sed ut perspiciatis unde omnis iste natus voluptatem
-                        accusantium doloremque laudantium totamto aperiame eaque
-                        ipsa quae ab illo inventore veritatis
+                        We make use of the latest technology to power our
+                        solutions. Python, AI and Power BI, are just a few
+                        examples of the high-powered technologies and languages
+                        we use to perform data analysis, visualizations and
+                        automations on your spreadsheets. Your spreadsheet will
+                        be customized with context specific abilities tailored
+                        to your specific industry domain. Use these modern
+                        toolings to stay ahead of your competitors.
                       </p>
                       <div className="feature-icon-box text-white mt-30">
                         <div className="icon">
                           <i className="far fa-check" />
                         </div>
                         <div className="content">
-                          <h5>Individual lead profile</h5>
+                          <h5>Individiaulized Analytics</h5>
                           <p>Doloremque laudantium totamto aperiame eaque</p>
                         </div>
                       </div>
@@ -270,7 +256,7 @@ const page = () => {
                           <i className="far fa-check" />
                         </div>
                         <div className="content">
-                          <h5>Advanced deal tracking</h5>
+                          <h5>State-Of-The-Art Tooling</h5>
                           <p>
                             At vero eoset accusamus etodio dignissimos ducimus
                           </p>
@@ -354,14 +340,14 @@ const page = () => {
                   <i className="flaticon-review" />
                 </div>
                 <span
-                  className="count-text k-plus"
+                  className="count-text plus"
                   data-speed={3000}
                   data-stop={25}
                 >
-                  <Counter end={25} />
+                  <Counter end={15} />
                 </span>
                 <hr />
-                <span className="counter-title">100% Satisficed Clients</span>
+                <span className="counter-title">100% Satisfied Clients</span>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
@@ -370,16 +356,14 @@ const page = () => {
                   <i className="flaticon-layers-1" />
                 </div>
                 <span
-                  className="count-text k-plus"
+                  className="count-text plus"
                   data-speed={3000}
                   data-stop={235}
                 >
-                  <Counter end={253} />
+                  <Counter end={25} />
                 </span>
                 <hr />
-                <span className="counter-title">
-                  Task Complete For Global Clients
-                </span>
+                <span className="counter-title">Projects Completed</span>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
@@ -387,15 +371,21 @@ const page = () => {
                 <div className="icon">
                   <i className="flaticon-online-registration" />
                 </div>
-                <span
-                  className="count-text k-plus"
-                  data-speed={3000}
-                  data-stop={1052}
-                >
-                  <Counter end={1052} />
+                <span className="count-text" data-speed={3000} data-stop={1052}>
+                  4.8
                 </span>
                 <hr />
-                <span className="counter-title">Regular Free Registation</span>
+                <span className="counter-title">
+                  TrustPilot{" "}
+                  <a
+                    style={{
+                      color: "RGB(5, 99, 193)",
+                      textDecoration: "underline",
+                    }}
+                  >
+                    Reviews
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -569,55 +559,6 @@ const page = () => {
         </div>
       </section>
       {/* Feature box Area End */}
-      {/* About Area Five Start */}
-      <section className="about-area-five pb-120 rpb-100 rel z-1">
-        <div className="container">
-          <div className="row gap-40 align-items-center">
-            <div className="col-lg-6">
-              <div className="about-images-five rmb-55">
-                <img src="assets/images/about/about-five1.png" alt="About" />
-                <img src="assets/images/about/about-five2.png" alt="About" />
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="about-content-five mt-40 rmt-15">
-                <div className="section-title mb-30">
-                  <span className="subtitle-one style-two mb-20">
-                    <i className="fas fa-rocket-launch" /> Build Better products
-                  </span>
-                  <h2>Instant feedback to build better Products</h2>
-                </div>
-                <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque corrupti quos
-                  dolores et quas molestias excepturi sint occaecati cupiditate
-                  non provident similique sunt
-                </p>
-                <ul className="icon-list style-two mt-40 mb-40">
-                  <li>
-                    <i className="fal fa-check" /> Connect with leads with zero
-                    hassle.
-                  </li>
-                  <li>
-                    <i className="fal fa-check" /> Take quick payments direct
-                    from meetings
-                  </li>
-                </ul>
-                <Link href="about" className="theme-btn">
-                  Learn More <i className="far fa-arrow-right" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="bg-lines">
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-      </section>
-      {/* About Area End */}
       {/* FeedbackArea Start */}
       <section
         id="testimonials"
