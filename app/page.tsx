@@ -3,103 +3,189 @@ import Counter from "@/components/Counter";
 import AkpagerLayout from "@/layouts/AkpagerLayout";
 import { sliderProps } from "@/utility/sliderProps";
 import Link from "next/link";
-import { Nav, Tab } from "react-bootstrap";
+import { Tab } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
 import Slider from "react-slick";
+import ContactForm from "./index5-onepage/ContactForm";
+
 const page = () => {
+  const isTabletOrBelow = useMediaQuery({ query: "(max-width: 960px)" });
+
   return (
-    <AkpagerLayout footer={5} header={5} bodyClass={"home-five"}>
+    <AkpagerLayout footer={5} header={5} bodyClass={"home-five"} onePage>
       {" "}
       {/* Hero area start */}
-      <section className="hero-area-five py-130 rpy-100 rel z-1">
-        <div className="container">
+      {isTabletOrBelow ? (
+        <section id="home" className="hero-area-five py-130 rpy-100 rel z-1">
+          <div className="container">
+            <div className="hero-content style-five text-center">
+              <span className="subtitle-one mb-20">
+                <i className="fas fa-rocket-launch" /> Excel Automations And
+                Analysis
+              </span>
+              <h1 style={{ textWrap: "balance" }}>
+                Excel Experts To Solve Your Business Needs
+              </h1>
+              <div className="row justify-content-center pt-5 rpt-0 pb-25">
+                <div className="col-xl-7 col-lg-9">
+                  <p>
+                    SLK Automations powers business spreadsheets through expert
+                    consulting on spreadsheet needs from data visualizations and
+                    analysis, to custom macros and formulas
+                  </p>
+                </div>
+              </div>
+              <Link href="contact" className="theme-btn">
+                Book a consultation <i className="far fa-arrow-right" />
+              </Link>
+            </div>
+          </div>
+          <div className="hero-bg-wave-shapes">
+            <span className="circle" />
+          </div>
+          <div className="bg-lines">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
           <div
-            className="hero-content style-five text-center"
-            data-aos="fade-up"
-            data-aos-duration={1500}
-            data-aos-offset={50}
+            style={{
+              marginBlock: "32px",
+              marginInline: "auto",
+              backgroundColor: "#ccc",
+              display: "block",
+              width: "75%",
+              height: "1px",
+            }}
+          ></div>
+          <div
+            style={{ justifyContent: "space-evenly" }}
+            className="clients-reviews"
           >
-            <span
-              className="subtitle-one mb-20"
-              data-aos="fade-up"
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
-              <i className="fas fa-rocket-launch" /> Analytics you’ll enjoy
-              using
-            </span>
-            <h1
-              data-aos="fade-up"
-              data-aos-delay={50}
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
-              Only Customer Communication platform you'll ever need
-            </h1>
-            <div
-              className="row justify-content-center pt-5 rpt-0 pb-25"
-              data-aos="fade-up"
-              data-aos-delay={100}
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
-              <div className="col-xl-7 col-lg-9">
-                <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam eaque
-                  quae abillo inventore veritatis
-                </p>
+            <div style={{ margin: 0 }} className="clients">
+              <h6>Happy Customer</h6>
+              <div className="images">
+                <img src="assets/images/hero/client1.png" alt="Client" />
+                <img src="assets/images/hero/client2.png" alt="Client" />
+                <img src="assets/images/hero/client3.png" alt="Client" />
+                <img src="assets/images/hero/client4.png" alt="Client" />
               </div>
             </div>
-            <Link href="contact" className="theme-btn">
-              Sign Up For Free <i className="far fa-arrow-right" />
-            </Link>
+            <div style={{ margin: 0 }} className="reviews">
+              <h6>4.7/5 on TrustPilot</h6>
+              <div className="ratting">
+                <i className="fas fa-star" />
+                <i className="fas fa-star" />
+                <i className="fas fa-star" />
+                <i className="fas fa-star" />
+                <i className="fas fa-star" />
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="hero-bg-wave-shapes">
-          <span className="circle" />
-        </div>
-        <div className="bg-lines">
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-      </section>
+          <div style={{ marginBlock: "52px" }} />
+          <div style={{ paddingInline: "28px" }}>
+            <ContactForm />
+          </div>
+        </section>
+      ) : (
+        <section
+          id="home"
+          style={{ paddingTop: "80px" }}
+          className="hero-area-five pb-130 rpy-100 rel z-1"
+        >
+          <div style={{ display: "flex" }} className="container">
+            <div
+              style={{
+                flex: "5 1 0",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+              className="hero-content style-five text-center"
+            >
+              {/* <span style={{ textAlign: "left" }} className="subtitle-one">
+              <i className="fas fa-rocket-launch" /> Excel Automations And
+              Analysis
+            </span> */}
+              <h1
+                style={{
+                  textWrap: "balance",
+                  textAlign: "left",
+                  marginBottom: 0,
+                }}
+              >
+                Excel Experts To Solve Your Business Needs
+              </h1>
+              <div style={{ marginBlock: "16px" }} />
+              <div className="row justify-content-start pb-25">
+                <div className="col-xl-7 col-lg-9">
+                  <p style={{ textAlign: "left" }}>
+                    SLK Automations powers business spreadsheets through expert
+                    consulting on spreadsheet needs from data visualizations and
+                    analysis, to custom macros and formulas
+                  </p>
+                </div>
+              </div>
+              {/* <Divider /> */}
+              <div
+                style={{
+                  backgroundColor: "#ccc",
+                  display: "block",
+                  width: "75%",
+                  height: "1px",
+                }}
+              ></div>
+              <div
+                style={{ justifyContent: "start", gap: "32px" }}
+                className="clients-reviews"
+              >
+                <div className="clients">
+                  <h6>Happy Customer</h6>
+                  <div className="images">
+                    <img src="assets/images/hero/client1.png" alt="Client" />
+                    <img src="assets/images/hero/client2.png" alt="Client" />
+                    <img src="assets/images/hero/client3.png" alt="Client" />
+                    <img src="assets/images/hero/client4.png" alt="Client" />
+                  </div>
+                </div>
+                <div className="reviews">
+                  <h6>4.7/5 on TrustPilot</h6>
+                  <div className="ratting">
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ContactForm />
+          </div>
+          <div className="hero-bg-wave-shapes">
+            <span className="circle" />
+          </div>
+          <div className="bg-lines">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+        </section>
+      )}
       {/* Hero area End */}
-      {/* Hero Image Part End */}
-      <div
-        className="hero-image-area rel z-1"
-        data-aos="zoom-in-up"
-        data-aos-duration={1500}
-        data-aos-offset={50}
-      >
-        <div className="container container-1370">
-          <img src="assets/images/hero/hero-five.png" alt="Hero" />
-        </div>
-      </div>
-      {/* Hero Image Part End */}
       {/* Client Logos Area Start */}
       <section className="client-logo-area-five pt-125 rpt-105 rel z-1">
         <div className="container">
-          <div
-            className="section-title text-center mb-50"
-            data-aos="fade-up"
-            data-aos-duration={1500}
-            data-aos-offset={50}
-          >
+          <div className="section-title text-center mb-50">
             <h4>
-              I’ve <span>1253+</span> Global Clients &amp; lot’s of Project
-              Complete
+              Partnered with over{""} <span>15+</span> Agencies &amp; Businesses
             </h4>
           </div>
           <div className="row justify-content-center">
             <div className="col-xl-2 col-lg-3 col-md-4 col-6">
-              <div
-                className="client-logo-item"
-                data-aos="fade-up"
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="client-logo-item">
                 <a href="#">
                   <img
                     src="assets/images/client-logos/client-logo1.png"
@@ -109,13 +195,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6">
-              <div
-                className="client-logo-item"
-                data-aos="fade-up"
-                data-aos-delay={50}
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="client-logo-item">
                 <a href="#">
                   <img
                     src="assets/images/client-logos/client-logo2.png"
@@ -125,13 +205,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6">
-              <div
-                className="client-logo-item"
-                data-aos="fade-up"
-                data-aos-delay={100}
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="client-logo-item">
                 <a href="#">
                   <img
                     src="assets/images/client-logos/client-logo3.png"
@@ -141,13 +215,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6">
-              <div
-                className="client-logo-item"
-                data-aos="fade-up"
-                data-aos-delay={150}
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="client-logo-item">
                 <a href="#">
                   <img
                     src="assets/images/client-logos/client-logo4.png"
@@ -157,13 +225,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6">
-              <div
-                className="client-logo-item"
-                data-aos="fade-up"
-                data-aos-delay={200}
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="client-logo-item">
                 <a href="#">
                   <img
                     src="assets/images/client-logos/client-logo5.png"
@@ -173,13 +235,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-xl-2 col-lg-3 col-md-4 col-6">
-              <div
-                className="client-logo-item"
-                data-aos="fade-up"
-                data-aos-delay={250}
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="client-logo-item">
                 <a href="#">
                   <img
                     src="assets/images/client-logos/client-logo6.png"
@@ -199,95 +255,84 @@ const page = () => {
       </section>
       {/* Client Logos Area End */}
       {/* Feature Image box Area Start */}
-      <section className="feature-image-box-area pt-95 rpt-75 pb-70 rpb-50 rel z-1">
+      <section
+        id="features"
+        className="feature-image-box-area pt-95 rpt-75 pb-70 rpb-50 rel z-1"
+      >
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-9 col-md-11">
-              <div
-                className="section-title text-center mb-55"
-                data-aos="fade-up"
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="section-title text-center mb-55">
                 <span className="subtitle-one style-two mb-20">
-                  <i className="fas fa-rocket-launch" /> Best Communication
-                  System
+                  {/* <i className="fas fa-rocket-launch" /> World Class Support */}
                 </span>
-                <h2>Support your customers on their preferred channels</h2>
+                <h2>Power your spreadsheets</h2>
               </div>
             </div>
           </div>
           <div className="row justify-content-center">
             <div className="col-xl-4 col-md-6">
-              <div
-                className="feature-image-box"
-                data-aos="fade-up"
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="feature-image-box">
                 <div className="image">
                   <img
-                    src="assets/images/services/feature1.png"
+                    src="https://media.licdn.com/dms/image/D4D12AQFZF31wF_MOGQ/article-cover_image-shrink_720_1280/0/1684315532338?e=2147483647&v=beta&t=qKqYcysmUa8eaeaBT8p4F392C8VAuUCOjA0eE4WGb_Q"
                     alt="Feature"
                   />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Share Inbox</Link>
+                    <Link href="service-details">
+                      Data visualization and analysis
+                    </Link>
                   </h5>
                   <p>
-                    Sed uterspiciatis unde omnis natus error voluptatem
-                    accusantium doloremque ways laudantium totam aperiam eaque
+                    Our expert analysts use advanced data visualization
+                    techniques and technology, including <strong>VBA</strong>,{" "}
+                    <strong>Power BI</strong> and <strong> Python</strong>. Your
+                    financial reports and predictions are in good hands
                   </p>
                 </div>
               </div>
             </div>
             <div className="col-xl-4 col-md-6">
-              <div
-                className="feature-image-box"
-                data-aos="fade-up"
-                data-aos-delay={100}
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="feature-image-box">
                 <div className="image">
                   <img
-                    src="assets/images/services/feature2.png"
+                    style={{ objectFit: "contain" }}
+                    src="https://nanonets.com/blog/content/images/2023/08/Pivot-Table-Example-for-Excel-Automation.png"
                     alt="Feature"
                   />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Custom Analytics</Link>
+                    <Link href="service-details">Process Automation</Link>
                   </h5>
                   <p>
-                    Quis autem vel eumiure reprehenderit qui in ea voluptate
-                    velit esse quam molestiae consequatur vel illum qui dolorem
+                    Our team work with{" "}
+                    <strong>your existing spreadsheets</strong>
+                    to automate <strong>manual</strong> workflows through{" "}
+                    <strong>macros</strong> and other techniques
                   </p>
                 </div>
               </div>
             </div>
             <div className="col-xl-4 col-md-6">
-              <div
-                className="feature-image-box"
-                data-aos="fade-up"
-                data-aos-delay={200}
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="feature-image-box">
                 <div className="image">
                   <img
-                    src="assets/images/services/feature3.png"
+                    src="https://images.ctfassets.net/lzny33ho1g45/6scPSxCdwNFMjunqSjtZKw/c1c94e86a6aaf07a7ab9d13305994cef/automate-microsoft-excel-00-hero.jpg?w=1520&fm=jpg&q=30&fit=thumb&h=760"
                     alt="Feature"
                   />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Contacts CRM</Link>
+                    <Link href="service-details">And More</Link>
                   </h5>
                   <p>
-                    To take a trivial example, which of us ever undertakes
-                    laborious physical exercise, except to obtain some advantage
+                    We also offer <strong>dashboard visualizations</strong>,{" "}
+                    <strong>data manipulation</strong> services,{" "}
+                    <strong>third party integrations</strong> and more. Book a
+                    consultation to let us know your needs!
                   </p>
                 </div>
               </div>
@@ -303,58 +348,42 @@ const page = () => {
       </section>
       {/* Feature Image box Area End */}
       {/* Tab Area Start */}
-      <section className="tab-area-five bgc-black text-white pt-120 rpt-100 pb-80 rpb-60 rel z-1">
+      <section
+        id="services"
+        className="tab-area-five bgc-black text-white pt-120 rpt-100 pb-80 rpb-60 rel z-1"
+      >
         <div className="container">
           <div className="row gap-100 align-items-center justify-content-center">
             <div className="col-lg-6">
-              <div
-                className="tap-five-content rmb-55"
-                data-aos="fade-left"
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="tap-five-content rmb-55">
                 <div className="section-title pt-10 mb-55">
                   <span className="subtitle-one style-three mb-20">
-                    <i className="fas fa-rocket-launch" /> Best Custom Saas to
-                    you
+                    {/* <i className="fas fa-rocket-launch" /> Best Custom Saas to
+                    you */}
                   </span>
-                  <h2>Leverage our APIs to build your custom apps</h2>
+                  <h2>
+                    Modernize your spreadsheets to get ahead of your competitors
+                  </h2>
                 </div>
                 <Tab.Container defaultActiveKey={"tabFour1"}>
-                  <Nav
-                    as={"ul"}
-                    className="nav advanced-tab style-four mb-40"
-                    role="tablist"
-                  >
-                    <Nav.Item as={"li"}>
-                      <Nav.Link as={"button"} eventKey="tabFour1">
-                        Data Analyze
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as={"li"}>
-                      <Nav.Link as={"button"} eventKey="tabFour2">
-                        Collaborate
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as={"li"}>
-                      <Nav.Link as={"button"} eventKey="tabFour3">
-                        Easy &amp; secure
-                      </Nav.Link>
-                    </Nav.Item>
-                  </Nav>
                   <Tab.Content className="tab-content">
                     <Tab.Pane className="tab-pane fade" eventKey="tabFour1">
                       <p>
-                        Sed ut perspiciatis unde omnis iste natus voluptatem
-                        accusantium doloremque laudantium totamto aperiame eaque
-                        ipsa quae ab illo inventore veritatis
+                        We make use of the latest technology to power our
+                        solutions. Python, AI and Power BI, are just a few
+                        examples of the high-powered technologies and languages
+                        we use to perform data analysis, visualizations and
+                        automations on your spreadsheets. Your spreadsheet will
+                        be customized with context specific abilities tailored
+                        to your specific industry domain. Use these modern
+                        toolings to stay ahead of your competitors.
                       </p>
                       <div className="feature-icon-box text-white mt-30">
                         <div className="icon">
                           <i className="far fa-check" />
                         </div>
                         <div className="content">
-                          <h5>Individual lead profile</h5>
+                          <h5>Individiaulized Analytics</h5>
                           <p>Doloremque laudantium totamto aperiame eaque</p>
                         </div>
                       </div>
@@ -363,7 +392,7 @@ const page = () => {
                           <i className="far fa-check" />
                         </div>
                         <div className="content">
-                          <h5>Advanced deal tracking</h5>
+                          <h5>State-Of-The-Art Tooling</h5>
                           <p>
                             At vero eoset accusamus etodio dignissimos ducimus
                           </p>
@@ -429,12 +458,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div
-                className="management-images mb-20"
-                data-aos="fade-right"
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="management-images mb-20">
                 <img src="assets/images/tabs/tab-four.png" alt="Management" />
                 <div className="management-over">
                   <img
@@ -447,70 +471,57 @@ const page = () => {
           </div>
           <div className="row pt-90 rpt-70 gap-10">
             <div className="col-lg-4 col-md-6">
-              <div
-                className="counter-item style-two counter-text-wrap"
-                data-aos="fade-up"
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="counter-item style-two counter-text-wrap">
                 <div className="icon">
                   <i className="flaticon-review" />
                 </div>
                 <span
-                  className="count-text k-plus"
+                  className="count-text plus"
                   data-speed={3000}
                   data-stop={25}
                 >
-                  <Counter end={25} />
+                  <Counter end={15} />
                 </span>
                 <hr />
-                <span className="counter-title">100% Satisficed Clients</span>
+                <span className="counter-title">100% Satisfied Clients</span>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div
-                className="counter-item style-two counter-text-wrap"
-                data-aos="fade-up"
-                data-aos-delay={100}
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="counter-item style-two counter-text-wrap">
                 <div className="icon">
                   <i className="flaticon-layers-1" />
                 </div>
                 <span
-                  className="count-text k-plus"
+                  className="count-text plus"
                   data-speed={3000}
                   data-stop={235}
                 >
-                  <Counter end={253} />
+                  <Counter end={25} />
                 </span>
                 <hr />
-                <span className="counter-title">
-                  Task Complete For Global Clients
-                </span>
+                <span className="counter-title">Projects Completed</span>
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div
-                className="counter-item style-two counter-text-wrap"
-                data-aos="fade-up"
-                data-aos-delay={200}
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="counter-item style-two counter-text-wrap">
                 <div className="icon">
                   <i className="flaticon-online-registration" />
                 </div>
-                <span
-                  className="count-text k-plus"
-                  data-speed={3000}
-                  data-stop={1052}
-                >
-                  <Counter end={1052} />
+                <span className="count-text" data-speed={3000} data-stop={1052}>
+                  4.8
                 </span>
                 <hr />
-                <span className="counter-title">Regular Free Registation</span>
+                <span className="counter-title">
+                  TrustPilot{" "}
+                  <a
+                    style={{
+                      color: "RGB(5, 99, 193)",
+                      textDecoration: "underline",
+                    }}
+                  >
+                    Reviews
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -523,45 +534,84 @@ const page = () => {
         </div>
       </section>
       {/* Tab Area End */}
+      <section className="about-area-five pt-120 rpb-100 rel z-1">
+        <div className="container">
+          <div className="row gap-40 align-items-center">
+            <div className="col-lg-6">
+              <div className="about-images-five rmb-55">
+                <img src="assets/images/about/about-five1.png" alt="About" />
+                <img src="assets/images/about/about-five2.png" alt="About" />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="about-content-five mt-40 rmt-15">
+                <div className="section-title mb-30">
+                  <span className="subtitle-one style-two mb-20">
+                    {/* <i className="fas fa-rocket-launch" /> Build Better products */}
+                  </span>
+                  <h2>Power existing workflows</h2>
+                </div>
+                <p>
+                  Automate your manual workflows, and speed up your existing
+                  processes! Our team of expert analysts are experienced with
+                  VBA, macros, custom formulas and more Excel features to help
+                  automate your workflows. Or, if you have existing automations,
+                  we can even work with your Excel team to help make them more
+                  effective and efficient!
+                </p>
+                <ul className="icon-list style-two mt-40 mb-40">
+                  <li>
+                    <i className="fal fa-check" /> Automate your manual
+                    workflows
+                  </li>
+                  <li>
+                    <i className="fal fa-check" /> Optimize your current
+                    automations
+                  </li>
+                </ul>
+                <Link href="/#home" className="theme-btn">
+                  Learn More <i className="far fa-arrow-right" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-lines">
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+      </section>
       {/* Feature box Area Start */}
-      <section className="feature-box-area pt-125 rpt-105 pb-90 rpb-70 rel z-1">
+      <section
+        id="tooling"
+        className="feature-box-area pt-125 rpt-105 pb-90 rpb-70 rel z-1"
+      >
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-9 col-md-11">
-              <div
-                className="section-title text-center mb-55"
-                data-aos="fade-up"
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
+              <div className="section-title text-center mb-55">
                 <span className="subtitle-one style-two mb-20">
-                  <i className="fas fa-rocket-launch" /> Akpager Core Features
+                  <i className="fas fa-rocket-launch" /> Our Excel Toolbox
                 </span>
-                <h2>Powerful approach to project planning and creation</h2>
+                <h2 style={{ textDecoration: "balance" }}>
+                  We choose the right tools for the job
+                </h2>
               </div>
             </div>
           </div>
           <div className="row">
-            <div
-              className="col-xl-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
+            <div className="col-xl-4 col-md-6">
               <div className="iconic-box style-seven">
                 <div className="icon">
                   <i className="fal fa-atom-alt" />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">
-                      Proactive Blocklist Tracking
-                    </Link>
+                    <Link href="service-details">VBA Programming</Link>
                   </h5>
-                  <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
-                  </p>
+                  <p>We can help manipulate, clean, and consume your data</p>
                 </div>
                 <div className="bg">
                   <img
@@ -571,24 +621,18 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="col-xl-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay={100}
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
+            <div className="col-xl-4 col-md-6">
               <div className="iconic-box style-seven">
                 <div className="icon">
                   <i className="fal fa-rocket-launch" />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Faster Time to Inbox</Link>
+                    <Link href="service-details">Macros</Link>
                   </h5>
                   <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
+                    Stop manually performing repetitive tasks. Automate your
+                    existing manual workflows
                   </p>
                 </div>
                 <div className="bg">
@@ -599,26 +643,18 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="col-xl-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay={200}
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
+            <div className="col-xl-4 col-md-6">
               <div className="iconic-box style-seven">
                 <div className="icon">
                   <i className="far fa-bullseye-pointer" />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">
-                      Build Confidence with BIMI
-                    </Link>
+                    <Link href="service-details">Power BI</Link>
                   </h5>
                   <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
+                    Connect your spreadsheet to more powerful tools. Dashboard
+                    visualizations and manipulations
                   </p>
                 </div>
                 <div className="bg">
@@ -629,23 +665,18 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="col-xl-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
+            <div className="col-xl-4 col-md-6">
               <div className="iconic-box style-seven">
                 <div className="icon">
                   <i className="far fa-anchor" />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Manage Dedicated IPs</Link>
+                    <Link href="service-details">Pivot Tables</Link>
                   </h5>
                   <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
+                    Calculate, summarize, and analyze your data. Make
+                    comparisons, find patterns, and determine trends
                   </p>
                 </div>
                 <div className="bg">
@@ -656,24 +687,18 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="col-xl-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay={100}
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
+            <div className="col-xl-4 col-md-6">
               <div className="iconic-box style-seven">
                 <div className="icon">
                   <i className="far fa-layer-group" />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Dynamic suppression List</Link>
+                    <Link href="service-details">Custom Formulas</Link>
                   </h5>
                   <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
+                    Find interesting insights from your context-specific data.
+                    Utilize custom aggregation techniques
                   </p>
                 </div>
                 <div className="bg">
@@ -684,25 +709,16 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="col-xl-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay={200}
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
+            <div className="col-xl-4 col-md-6">
               <div className="iconic-box style-seven">
                 <div className="icon">
                   <i className="far fa-shield-check" />
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Verify DNS Records</Link>
+                    <Link href="service-details">And More</Link>
                   </h5>
-                  <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
-                  </p>
+                  <p>...Book a consultation so we can learn your needs</p>
                 </div>
                 <div className="bg">
                   <img
@@ -722,86 +738,20 @@ const page = () => {
         </div>
       </section>
       {/* Feature box Area End */}
-      {/* About Area Five Start */}
-      <section className="about-area-five pb-120 rpb-100 rel z-1">
-        <div className="container">
-          <div className="row gap-40 align-items-center">
-            <div className="col-lg-6">
-              <div
-                className="about-images-five rmb-55"
-                data-aos="fade-left"
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
-                <img src="assets/images/about/about-five1.png" alt="About" />
-                <img src="assets/images/about/about-five2.png" alt="About" />
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div
-                className="about-content-five mt-40 rmt-15"
-                data-aos="fade-right"
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
-                <div className="section-title mb-30">
-                  <span className="subtitle-one style-two mb-20">
-                    <i className="fas fa-rocket-launch" /> Build Better products
-                  </span>
-                  <h2>Instant feedback to build better Products</h2>
-                </div>
-                <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque corrupti quos
-                  dolores et quas molestias excepturi sint occaecati cupiditate
-                  non provident similique sunt
-                </p>
-                <ul className="icon-list style-two mt-40 mb-40">
-                  <li>
-                    <i className="fal fa-check" /> Connect with leads with zero
-                    hassle.
-                  </li>
-                  <li>
-                    <i className="fal fa-check" /> Take quick payments direct
-                    from meetings
-                  </li>
-                </ul>
-                <Link href="about" className="theme-btn">
-                  Learn More <i className="far fa-arrow-right" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="bg-lines">
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-      </section>
-      {/* About Area End */}
       {/* FeedbackArea Start */}
-      <section className="feedback-area-five bgc-lighter pt-125 rpt-105 pb-80 rpb-60 rel z-1">
+      <section
+        id="testimonials"
+        className="feedback-area-five bgc-lighter pt-125 rpt-105 pb-80 rpb-60 rel z-1"
+      >
         <div className="container">
-          <div
-            className="section-title text-center mb-55"
-            data-aos="fade-up"
-            data-aos-duration={1500}
-            data-aos-offset={50}
-          >
+          <div className="section-title text-center mb-55">
             <span className="subtitle-one style-two mb-20">
               <i className="fas fa-rocket-launch" /> Customer Feedback
             </span>
-            <h2>We’ve 1253+ Customer Feedback</h2>
+            <h2>Here's what our partners say</h2>
           </div>
           <div className="row gap-50">
-            <div
-              className="col-lg-6"
-              data-aos="fade-right"
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
+            <div className="col-lg-6">
               <div className="testimonial-item style-two">
                 <div className="author">
                   <div className="image">
@@ -815,8 +765,12 @@ const page = () => {
                   </div>
                 </div>
                 <div className="author-text">
-                  At vero eoset accusamus iusto dignissimos ducimus blanditiis
-                  praesentium voluptatume delenitie corruptie dolores molestias
+                  As the CFO of a mid-sized manufacturing company, I have been
+                  continually impressed by the services offered by Brady and SLK Automations. Their team helped streamlined our financial reporting
+                  processes and implemented advanced forecasting models that
+                  have significantly improved our budgeting accuracy. They are
+                  an invaluable partner to us and we highly recommend their
+                  services
                 </div>
                 <div className="testi-footer">
                   <div className="ratting">
@@ -832,12 +786,7 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div
-              className="col-lg-6"
-              data-aos="fade-left"
-              data-aos-duration={1500}
-              data-aos-offset={50}
-            >
+            <div className="col-lg-6">
               <div className="testimonial-item style-two">
                 <div className="author">
                   <div className="image">
@@ -851,8 +800,14 @@ const page = () => {
                   </div>
                 </div>
                 <div className="author-text">
-                  At vero eoset accusamus iusto dignissimos ducimus blanditiis
-                  praesentium voluptatume delenitie corruptie dolores molestias
+                  I run a small online retail business, and data management was
+                  always a challenge for us until we started working with
+                  John from SLK. Their consultants transformed our data into
+                  clear, actionable insights that have directly contributed to
+                  an increase in our sales. Their custom dashboard lets us track
+                  our key performance indicators in real-time. I'm grateful for
+                  their expertise and highly recommend their services to any
+                  business working with Excel
                 </div>
                 <div className="testi-footer">
                   <div className="ratting">
@@ -950,83 +905,9 @@ const page = () => {
       </section>
       {/* FeedbackArea End */}
       {/* Work Step Area Five Start */}
-      <section className="work-step-area-five pt-120 rpt-100 pb-100 rpb-80 rel z-1">
-        <div className="container">
-          <div className="row justify-content-between">
-            <div className="col-xl-5 col-lg-6">
-              <div
-                className="about-content-five mt-10 mb-20 rmb-55"
-                data-aos="fade-right"
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
-                <div className="section-title mb-30">
-                  <span className="subtitle-one style-two mb-20">
-                    <i className="fas fa-rocket-launch" /> How to get Started
-                  </span>
-                  <h2>Getting started takes less than 2 minutes</h2>
-                </div>
-                <ul className="icon-list mt-40 mb-40">
-                  <li>
-                    <i className="fal fa-arrow-right" /> No credit card required
-                  </li>
-                </ul>
-                <Link href="about" className="theme-btn">
-                  Learn More <i className="far fa-arrow-right" />
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div
-                className="numbered-boxes"
-                data-aos="fade-left"
-                data-aos-duration={1500}
-                data-aos-offset={50}
-              >
-                <div className="numbered-box style-two">
-                  <div className="number">1</div>
-                  <div className="content">
-                    <h5>Connect Your Account</h5>
-                    <p>
-                      Praesentium voluptatum deleniti atque corrupti quos
-                      dolores quas molestias exceptur occaecatie
-                    </p>
-                  </div>
-                </div>
-                <div className="numbered-box style-two">
-                  <div className="number">2</div>
-                  <div className="content">
-                    <h5>View Data Analysis</h5>
-                    <p>
-                      Praesentium voluptatum deleniti atque corrupti quos
-                      dolores quas molestias exceptur occaecatie
-                    </p>
-                  </div>
-                </div>
-                <div className="numbered-box style-two">
-                  <div className="number">3</div>
-                  <div className="content">
-                    <h5>Get Your Final Result</h5>
-                    <p>
-                      Praesentium voluptatum deleniti atque corrupti quos
-                      dolores quas molestias exceptur occaecatie
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="bg-lines">
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-      </section>
       {/* Work Step Area End */}
       {/* Footer Top CTA Area Start */}
-      <section className="footer-top-cta-area">
+      {/* <section className="footer-top-cta-area">
         <div className="container container-1500">
           <div
             className="footer-top-cta-wrap bgc-primary"
@@ -1036,22 +917,12 @@ const page = () => {
           >
             <div className="row align-items-center justify-content-between">
               <div className="col-lg-6">
-                <div
-                  className="image rmb-55"
-                  data-aos="fade-left"
-                  data-aos-duration={1500}
-                  data-aos-offset={50}
-                >
+                <div className="image rmb-55">
                   <img src="assets/images/footer/footer-cta.png" alt="CTA" />
                 </div>
               </div>
               <div className="col-xl-5 col-lg-6">
-                <div
-                  className="footer-top-cta-content text-white"
-                  data-aos="fade-right"
-                  data-aos-duration={1500}
-                  data-aos-offset={50}
-                >
+                <div className="footer-top-cta-content text-white">
                   <div className="section-title mb-30">
                     <span className="subtitle-one style-three mb-20">
                       <i className="fas fa-rocket-launch" /> Get Started Free
@@ -1070,7 +941,7 @@ const page = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </AkpagerLayout>
   );
 };
