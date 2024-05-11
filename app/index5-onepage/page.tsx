@@ -611,10 +611,7 @@ const page = () => {
                   <h5>
                     <Link href="service-details">VBA Programming</Link>
                   </h5>
-                  <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
-                  </p>
+                  <p>We can help manipulate, clean, and consume your data</p>
                 </div>
                 <div className="bg">
                   <img
@@ -634,8 +631,8 @@ const page = () => {
                     <Link href="service-details">Macros</Link>
                   </h5>
                   <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
+                    Stop manually performing repetitive tasks. Automate your
+                    existing manual workflows
                   </p>
                 </div>
                 <div className="bg">
@@ -656,8 +653,8 @@ const page = () => {
                     <Link href="service-details">Power BI</Link>
                   </h5>
                   <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
+                    Connect your spreadsheet to more powerful tools. Dashboard
+                    visualizations and manipulations
                   </p>
                 </div>
                 <div className="bg">
@@ -678,8 +675,8 @@ const page = () => {
                     <Link href="service-details">Pivot Tables</Link>
                   </h5>
                   <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
+                    Calculate, summarize, and analyze your data. Make
+                    comparisons, find patterns, and determine trends
                   </p>
                 </div>
                 <div className="bg">
@@ -700,8 +697,8 @@ const page = () => {
                     <Link href="service-details">Custom Formulas</Link>
                   </h5>
                   <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
+                    Find interesting insights from your context-specific data.
+                    Utilize custom aggregation techniques
                   </p>
                 </div>
                 <div className="bg">
@@ -721,10 +718,7 @@ const page = () => {
                   <h5>
                     <Link href="service-details">And More</Link>
                   </h5>
-                  <p>
-                    Sed ut perspiciatis unde omnis iste natus doloremque
-                    laudantium totamto
-                  </p>
+                  <p>...Book a consultation so we can learn your needs</p>
                 </div>
                 <div className="bg">
                   <img
