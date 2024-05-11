@@ -1,58 +1,79 @@
+"use client";
+import { useTransition } from "react";
+import { useForm } from "react-hook-form";
+import sendEmail from "./sendEmail";
+
+export type FormValues = {
+  name: string;
+  email: string;
+  additionalDetails: string;
+  agreeToTerms: boolean;
+};
+
 const ContactForm = () => {
+  const [isPending, startTransition] = useTransition();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>();
+
+  const onSubmit = async (data: FormValues) => {
+    startTransition(() => {
+      sendEmail(data);
+    });
+  };
+
   return (
     <div style={{ flex: "4 1 0" }} className="col-lg-6 rel z-1">
-      <div className="hero-form">
-        <h4>Sign Up Now</h4>
-        <p>Ready to Register Our Landsio Services</p>
-        <form action="#" name="contactForm" method="post">
+      <div style={{ paddingBlock: "52px" }} className="hero-form">
+        <h4>Start supercharging your spreadsheets</h4>
+        <div style={{ marginBlock: "24px" }} />
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          name="contactForm"
+          method="post"
+        >
           <div className="form-group">
             <input
               type="text"
-              id="name"
-              name="name"
               className="form-control"
-              defaultValue=""
               placeholder="Your Name"
-              required=""
+              {...register("name", { required: true })}
             />
           </div>
           <div className="form-group">
             <input
               type="email"
-              id="email"
-              name="email"
               className="form-control"
-              defaultValue=""
               placeholder="Email Address"
-              required=""
+              {...register("email", { required: true })}
             />
           </div>
           <div className="form-group">
-            <input
-              type="text"
-              id="phone_number"
-              name="phone_number"
+            <textarea
+              id="additionalDetails"
               className="form-control"
-              defaultValue=""
-              placeholder="Phone Number"
-              required=""
+              rows={4}
+              placeholder="Enter any additional details"
+              data-error="Please enter your Message"
+              {...register("additionalDetails", { required: true })}
             />
           </div>
           <div className="form-group input-radio">
             <input
               type="radio"
-              id="terms"
-              name="terms"
-              defaultValue="terms"
-              required=""
+              id="agreeToTerms"
+              {...register("agreeToTerms", { required: true })}
             />
             <label htmlFor="terms">
-              I’ve Read and agreed to <a href="#">Terms &amp; Conditions</a>
+              By submitting this form, I agree to the collection of my personal
+              information
             </label>
           </div>
           <div className="form-group mb-0">
             <button type="submit" className="theme-btn">
-              Register <i className="far fa-arrow-right" />
+              Book a Consultation <i className="far fa-arrow-right" />
             </button>
           </div>
         </form>
