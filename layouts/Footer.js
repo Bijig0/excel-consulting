@@ -655,12 +655,16 @@ const Footer5 = () => {
         <div className="footer-cta pt-50 pb-20 text-white">
           <div className="logo">
             <Link href="/">
-              <img src="assets/images/logos/logo4.png" alt="Logo" />
+              <img
+                style={{ height: "70px", objectFit: "contain" }}
+                src="assets/images/logos/logo5-side.png"
+                alt="Logo"
+              />
             </Link>
           </div>
-          <h3>Ready to Enroll Our Course?</h3>
-          <Link href="contact" className="theme-btn style-two">
-            Enroll Now <i className="far fa-arrow-right" />
+          <h3>Ready to Power Your Spreadsheets?</h3>
+          <Link href="/#home" className="theme-btn style-two">
+            Book a consultation <i className="far fa-arrow-right" />
           </Link>
         </div>
         <hr />
@@ -682,56 +686,33 @@ const Footer5 = () => {
                   <i className="far fa-arrow-right" />
                 </button>
               </form>
-              <ul className="icon-list style-two mt-25">
+            </div>
+          </div>
+          <div className="col-xl-2 col-lg-3 col-sm-4 col-6">
+            <div className="footer-widget widget-links">
+              <h6 className="footer-title">Quick Links</h6>
+              <ul>
                 <li>
-                  <i className="fal fa-check" /> 7-day free trial
+                  <Link href="/#home">Home</Link>
                 </li>
                 <li>
-                  <i className="fal fa-check" /> No credit card required
+                  <Link href="/#features">Features</Link>
+                </li>
+                <li>
+                  <Link href="/#services">Services</Link>
                 </li>
               </ul>
             </div>
           </div>
           <div className="col-xl-2 col-lg-3 col-sm-4 col-6">
             <div className="footer-widget widget-links">
-              <h6 className="footer-title">Courses</h6>
+              <h6 className="footer-title">------</h6>
               <ul>
                 <li>
-                  <Link href="contact">Web Design</Link>
+                  <Link href="/#tooling">Tooling</Link>
                 </li>
                 <li>
-                  <Link href="contact">Digital Marketing</Link>
-                </li>
-                <li>
-                  <Link href="contact">Apps Development</Link>
-                </li>
-                <li>
-                  <Link href="contact">Graphics Design</Link>
-                </li>
-                <li>
-                  <Link href="contact">Computer Science</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-xl-2 col-lg-3 col-sm-4 col-6">
-            <div className="footer-widget widget-links">
-              <h6 className="footer-title">Quick Link</h6>
-              <ul>
-                <li>
-                  <Link href="services">Features</Link>
-                </li>
-                <li>
-                  <Link href="pricing">Pricing Plan</Link>
-                </li>
-                <li>
-                  <Link href="about">Best Program</Link>
-                </li>
-                <li>
-                  <Link href="contact">Press Kit</Link>
-                </li>
-                <li>
-                  <Link href="about">About Company</Link>
+                  <Link href="/#testimonials">Testimonials</Link>
                 </li>
               </ul>
             </div>
@@ -803,29 +784,12 @@ const Footer5 = () => {
             <div className="col-xl-4 col-lg-6">
               <div className="copyright-text pt-10 text-lg-start text-center">
                 <p>
-                  Copyright @2024, <Link href="/">Akpager </Link> All Rights
-                  Reserved
+                  Copyright @2024, <Link href="/">SLK Automations </Link> All
+                  Rights Reserved
                 </p>
               </div>
             </div>
-            <div className="col-xl-8 col-lg-6">
-              <div className="footer-bottom-menu text-lg-end text-center">
-                <ul>
-                  <li>
-                    <Link href="faqs">Faqs</Link>
-                  </li>
-                  <li>
-                    <Link href="about">Setting</Link>
-                  </li>
-                  <li>
-                    <Link href="about">Privacy</Link>
-                  </li>
-                  <li>
-                    <Link href="contact">Contact</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <div className="col-xl-4 col-lg-4"></div>
           </div>
           {/* Scroll Top Button */}
           <button className="scroll-top scroll-to-target" data-target="html">

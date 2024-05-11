@@ -343,7 +343,7 @@ const page = () => {
       {/* Feature Image box Area End */}
       {/* Tab Area Start */}
       <section
-        id="about"
+        id="services"
         className="tab-area-five bgc-black text-white pt-120 rpt-100 pb-80 rpb-60 rel z-1"
       >
         <div className="container">
@@ -578,7 +578,7 @@ const page = () => {
       </section>
       {/* Feature box Area Start */}
       <section
-        id="services"
+        id="tooling"
         className="feature-box-area pt-125 rpt-105 pb-90 rpb-70 rel z-1"
       >
         <div className="container">

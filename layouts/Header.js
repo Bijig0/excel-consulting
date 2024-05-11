@@ -271,10 +271,9 @@ const Header5 = ({ onePage }) => {
   const menus = [
     { id: 1, href: "home", title: "Home" },
     { id: 2, href: "features", title: "features" },
-    { id: 2, href: "about", title: "about" },
     { id: 3, href: "services", title: "services" },
+    { id: 2, href: "tooling", title: "tooling" },
     { id: 5, href: "testimonials", title: "testimonials" },
-    { id: 6, href: "work-step", title: "work step" },
   ];
   return (
     <header className="main-header no-border">
@@ -348,13 +347,9 @@ const Header5 = ({ onePage }) => {
               </nav>
               {/* Main Menu End*/}
             </div>
-            {/* Nav Search */}
-            <div className="nav-search ms-xl-2 ms-4 me-lg-auto py-10">
-              <NavSearch />
-            </div>
             {/* Menu Button */}
             <div className="menu-btns ms-lg-auto">
-              <Link href="contact" className="theme-btn">
+              <Link href="/#home" className="theme-btn">
                 Book a consultation <i className="far fa-arrow-right" />
               </Link>
             </div>
