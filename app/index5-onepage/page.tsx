@@ -4,151 +4,192 @@ import AkpagerLayout from "@/layouts/AkpagerLayout";
 import { sliderProps } from "@/utility/sliderProps";
 import Link from "next/link";
 import { Tab } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
 import Slider from "react-slick";
+
 const page = () => {
+  const isTabletOrBelow = useMediaQuery({ query: "(max-width: 960px)" });
+
   return (
     <AkpagerLayout footer={5} header={5} bodyClass={"home-five"} onePage>
       {" "}
       {/* Hero area start */}
-      <section
-        id="home"
-        style={{ paddingTop: "80px" }}
-        className="hero-area-five pb-130 rpy-100 rel z-1"
-      >
-        <div style={{ display: "flex" }} className="container">
-          <div
-            style={{
-              flex: "5 1 0",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-            }}
-            className="hero-content style-five text-center"
-          >
-            {/* <span style={{ textAlign: "left" }} className="subtitle-one">
+      {isTabletOrBelow ? (
+        <section id="home" className="hero-area-five py-130 rpy-100 rel z-1">
+          <div className="container">
+            <div className="hero-content style-five text-center">
+              <span className="subtitle-one mb-20">
+                <i className="fas fa-rocket-launch" /> Excel Automations And
+                Analysis
+              </span>
+              <h1 style={{ textWrap: "balance" }}>
+                Excel Experts To Solve Your Business Needs
+              </h1>
+              <div className="row justify-content-center pt-5 rpt-0 pb-25">
+                <div className="col-xl-7 col-lg-9">
+                  <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam eaque quae abillo inventore veritatis
+                  </p>
+                </div>
+              </div>
+              <Link href="contact" className="theme-btn">
+                Book a consultation <i className="far fa-arrow-right" />
+              </Link>
+            </div>
+          </div>
+          <div className="hero-bg-wave-shapes">
+            <span className="circle" />
+          </div>
+          <div className="bg-lines">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+        </section>
+      ) : (
+        <section
+          id="home"
+          style={{ paddingTop: "80px" }}
+          className="hero-area-five pb-130 rpy-100 rel z-1"
+        >
+          <div style={{ display: "flex" }} className="container">
+            <div
+              style={{
+                flex: "5 1 0",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+              className="hero-content style-five text-center"
+            >
+              {/* <span style={{ textAlign: "left" }} className="subtitle-one">
               <i className="fas fa-rocket-launch" /> Excel Automations And
               Analysis
             </span> */}
-            <h1
-              style={{
-                textWrap: "balance",
-                textAlign: "left",
-                marginBottom: 0,
-              }}
-            >
-              Excel Experts To Solve Your Business Needs
-            </h1>
-            <div style={{ marginBlock: "16px" }} />
-            <div className="row justify-content-start pb-25">
-              <div className="col-xl-7 col-lg-9">
-                <p style={{ textAlign: "left" }}>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam eaque
-                  quae abillo inventore veritatis
-                </p>
+              <h1
+                style={{
+                  textWrap: "balance",
+                  textAlign: "left",
+                  marginBottom: 0,
+                }}
+              >
+                Excel Experts To Solve Your Business Needs
+              </h1>
+              <div style={{ marginBlock: "16px" }} />
+              <div className="row justify-content-start pb-25">
+                <div className="col-xl-7 col-lg-9">
+                  <p style={{ textAlign: "left" }}>
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam eaque quae abillo inventore veritatis
+                  </p>
+                </div>
+              </div>
+              {/* <Divider /> */}
+              <div
+                style={{
+                  backgroundColor: "#08c16a",
+                  display: "block",
+                  width: "75%",
+                  height: "1px",
+                }}
+              ></div>
+              <div className="clients-reviews">
+                <div className="clients">
+                  <h6>Happy Customer</h6>
+                  <div className="images">
+                    <img src="assets/images/hero/client1.png" alt="Client" />
+                    <img src="assets/images/hero/client2.png" alt="Client" />
+                    <img src="assets/images/hero/client3.png" alt="Client" />
+                    <img src="assets/images/hero/client4.png" alt="Client" />
+                  </div>
+                </div>
+                <div className="reviews">
+                  <h6>4.7/5 on TrustPilot</h6>
+                  <div className="ratting">
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                    <i className="fas fa-star" />
+                  </div>
+                </div>
               </div>
             </div>
-            {/* <Divider /> */}
-            <div
-              style={{
-                backgroundColor: "#08c16a",
-                display: "block",
-                width: "75%",
-                height: "1px",
-              }}
-            ></div>
-            <div className="clients-reviews">
-              <div className="clients">
-                <h6>Happy Customer</h6>
-                <div className="images">
-                  <img src="assets/images/hero/client1.png" alt="Client" />
-                  <img src="assets/images/hero/client2.png" alt="Client" />
-                  <img src="assets/images/hero/client3.png" alt="Client" />
-                  <img src="assets/images/hero/client4.png" alt="Client" />
-                </div>
-              </div>
-              <div className="reviews">
-                <h6>4.7/5 on TrustPilot</h6>
-                <div className="ratting">
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                  <i className="fas fa-star" />
-                </div>
+            <div style={{ flex: "4 1 0" }} className="col-lg-6 rel z-1">
+              <div className="hero-form">
+                <h4>Sign Up Now</h4>
+                <p>Ready to Register Our Landsio Services</p>
+                <form action="#" name="contactForm" method="post">
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="form-control"
+                      defaultValue=""
+                      placeholder="Your Name"
+                      required=""
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="form-control"
+                      defaultValue=""
+                      placeholder="Email Address"
+                      required=""
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      id="phone_number"
+                      name="phone_number"
+                      className="form-control"
+                      defaultValue=""
+                      placeholder="Phone Number"
+                      required=""
+                    />
+                  </div>
+                  <div className="form-group input-radio">
+                    <input
+                      type="radio"
+                      id="terms"
+                      name="terms"
+                      defaultValue="terms"
+                      required=""
+                    />
+                    <label htmlFor="terms">
+                      I’ve Read and agreed to{" "}
+                      <a href="#">Terms &amp; Conditions</a>
+                    </label>
+                  </div>
+                  <div className="form-group mb-0">
+                    <button type="submit" className="theme-btn">
+                      Register <i className="far fa-arrow-right" />
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-          <div style={{ flex: "4 1 0" }} className="col-lg-6 rel z-1">
-            <div className="hero-form">
-              <h4>Sign Up Now</h4>
-              <p>Ready to Register Our Landsio Services</p>
-              <form action="#" name="contactForm" method="post">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="form-control"
-                    defaultValue=""
-                    placeholder="Your Name"
-                    required=""
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="form-control"
-                    defaultValue=""
-                    placeholder="Email Address"
-                    required=""
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    id="phone_number"
-                    name="phone_number"
-                    className="form-control"
-                    defaultValue=""
-                    placeholder="Phone Number"
-                    required=""
-                  />
-                </div>
-                <div className="form-group input-radio">
-                  <input
-                    type="radio"
-                    id="terms"
-                    name="terms"
-                    defaultValue="terms"
-                    required=""
-                  />
-                  <label htmlFor="terms">
-                    I’ve Read and agreed to{" "}
-                    <a href="#">Terms &amp; Conditions</a>
-                  </label>
-                </div>
-                <div className="form-group mb-0">
-                  <button type="submit" className="theme-btn">
-                    Register <i className="far fa-arrow-right" />
-                  </button>
-                </div>
-              </form>
-            </div>
+          <div className="hero-bg-wave-shapes">
+            <span className="circle" />
           </div>
-        </div>
-        <div className="hero-bg-wave-shapes">
-          <span className="circle" />
-        </div>
-        <div className="bg-lines">
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-      </section>
+          <div className="bg-lines">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+        </section>
+      )}
       {/* Hero area End */}
       {/* Client Logos Area Start */}
       <section className="client-logo-area-five pt-125 rpt-105 rel z-1">
