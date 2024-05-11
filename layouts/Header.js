@@ -45,7 +45,7 @@ const DefaultHeader = ({ onePage }) => {
   return (
     <header className="main-header menu-absolute header-white no-border">
       {/*Header-Upper*/}
-      <div className="header-upper">
+      <div style={{ borderBottom: "1px solid #333" }} className="header-upper">
         <div className="container container-1660 clearfix">
           <div className="header-inner py-15 rel d-flex align-items-center">
             <div className="logo-outer">
@@ -320,13 +320,16 @@ const Header5 = ({ onePage }) => {
         </div>
       </div>
       {/* Start Header-Upper*/}
-      <div className="header-upper">
+      <div style={{ borderBottom: "1px solid #333" }} className="header-upper">
         <div className="container container-1520 clearfix">
           <div className="header-inner py-20 rel d-flex align-items-center">
             <div className="logo-outer">
               <div className="logo">
                 <Link href="/">
                   <img
+                    style={{
+                      height: "100px",
+                    }}
                     src="assets/images/logos/logo5.png"
                     alt="Logo"
                     title="Logo"
@@ -339,7 +342,7 @@ const Header5 = ({ onePage }) => {
               <nav className="main-menu navbar-expand-lg">
                 <Nav
                   onePage={onePage}
-                  logo="assets/images/logos/logo5.png"
+                  logo="assets/images/logos/logo5-side.png"
                   menus={menus}
                 />
               </nav>
@@ -1005,7 +1008,12 @@ const Nav = ({
         <div className="navbar-header py-10">
           <div className="mobile-logo">
             <Link href="/">
-              <img src={logo} alt="Logo" title="Logo" />
+              <img
+                style={{ height: "42px", objectFit: "contain" }}
+                src={logo}
+                alt="Logo"
+                title="Logo"
+              />
             </Link>
           </div>
           {/* Toggle Button */}
