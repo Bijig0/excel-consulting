@@ -413,7 +413,7 @@ const page = () => {
                   <span className="subtitle-one style-two mb-20">
                     {/* <i className="fas fa-rocket-launch" /> Build Better products */}
                   </span>
-                  <h2>Power your workflows</h2>
+                  <h2>Power existing workflows</h2>
                 </div>
                 <p>
                   Automate your manual workflows, and speed up your existing
@@ -429,8 +429,7 @@ const page = () => {
                     workflows
                   </li>
                   <li>
-                    <i className="fal fa-check" /> Optimize your existing
-                    automations
+                    <i className="fal fa-check" /> Optimize your automations
                   </li>
                 </ul>
                 <Link href="about" className="theme-btn">
@@ -457,9 +456,11 @@ const page = () => {
             <div className="col-xl-7 col-lg-9 col-md-11">
               <div className="section-title text-center mb-55">
                 <span className="subtitle-one style-two mb-20">
-                  <i className="fas fa-rocket-launch" /> Akpager Core Features
+                  <i className="fas fa-rocket-launch" /> Our Excel Toolbox
                 </span>
-                <h2>Powerful approach to project planning and creation</h2>
+                <h2 style={{ textDecoration: "balance" }}>
+                  We choose the right tools for the job
+                </h2>
               </div>
             </div>
           </div>
@@ -471,7 +472,7 @@ const page = () => {
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Modern Analysis Tools</Link>
+                    <Link href="service-details">VBA Programming</Link>
                   </h5>
                   <p>
                     Sed ut perspiciatis unde omnis iste natus doloremque
@@ -493,7 +494,7 @@ const page = () => {
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Faster Time to Inbox</Link>
+                    <Link href="service-details">Macros</Link>
                   </h5>
                   <p>
                     Sed ut perspiciatis unde omnis iste natus doloremque
@@ -515,9 +516,7 @@ const page = () => {
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">
-                      Build Confidence with BIMI
-                    </Link>
+                    <Link href="service-details">Power BI</Link>
                   </h5>
                   <p>
                     Sed ut perspiciatis unde omnis iste natus doloremque
@@ -539,7 +538,7 @@ const page = () => {
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Manage Dedicated IPs</Link>
+                    <Link href="service-details">Pivot Tables</Link>
                   </h5>
                   <p>
                     Sed ut perspiciatis unde omnis iste natus doloremque
@@ -561,7 +560,7 @@ const page = () => {
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Dynamic suppression List</Link>
+                    <Link href="service-details">Custom Formulas</Link>
                   </h5>
                   <p>
                     Sed ut perspiciatis unde omnis iste natus doloremque
@@ -583,7 +582,7 @@ const page = () => {
                 </div>
                 <div className="content">
                   <h5>
-                    <Link href="service-details">Verify DNS Records</Link>
+                    <Link href="service-details">And More</Link>
                   </h5>
                   <p>
                     Sed ut perspiciatis unde omnis iste natus doloremque
