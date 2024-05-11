@@ -8,7 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const sendEmail = async (inputs: FormValues) => {
   const asString = JSON.stringify(inputs);
 
-  const { data, error } = await resend.emails.send({
+  const result = await resend.emails.send({
     from: "Acme <onboarding@resend.dev>",
     to: ["bradysuryasie@gmail.com"],
     subject: "Hello world",
@@ -17,9 +17,7 @@ const sendEmail = async (inputs: FormValues) => {
     }),
   });
 
-  if (error) throw error;
-
-  return data;
+  return result;
 };
 
 export default sendEmail;

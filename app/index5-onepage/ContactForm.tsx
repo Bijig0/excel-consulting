@@ -1,6 +1,9 @@
 "use client";
-import { useTransition } from "react";
+import { useState, useTransition } from "react";
+import { Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { Resend } from "resend";
+import ErrorText from "./ErrorText";
 import sendEmail from "./sendEmail";
 
 export type FormValues = {
@@ -10,8 +13,16 @@ export type FormValues = {
   agreeToTerms: boolean;
 };
 
+type CreateEmailResponse = Awaited<
+  ReturnType<InstanceType<typeof Resend>["emails"]["send"]>
+>;
+
 const ContactForm = () => {
   const [isPending, startTransition] = useTransition();
+
+  const [sendEmailResponse, setSendEmailResponse] =
+    useState<CreateEmailResponse>();
+
   const {
     register,
     handleSubmit,
@@ -19,8 +30,9 @@ const ContactForm = () => {
   } = useForm<FormValues>();
 
   const onSubmit = async (data: FormValues) => {
-    startTransition(() => {
-      sendEmail(data);
+    startTransition(async () => {
+      const result = await sendEmail(data);
+      setSendEmailResponse(result);
     });
   };
 
@@ -41,6 +53,7 @@ const ContactForm = () => {
               placeholder="Your Name"
               {...register("name", { required: true })}
             />
+            {errors.name && <ErrorText>Please enter your Name</ErrorText>}
           </div>
           <div className="form-group">
             <input
@@ -49,6 +62,7 @@ const ContactForm = () => {
               placeholder="Email Address"
               {...register("email", { required: true })}
             />
+            {errors.email && <ErrorText>Please enter your Email</ErrorText>}
           </div>
           <div className="form-group">
             <textarea
@@ -57,7 +71,7 @@ const ContactForm = () => {
               rows={4}
               placeholder="Enter any additional details"
               data-error="Please enter your Message"
-              {...register("additionalDetails", { required: true })}
+              {...register("additionalDetails")}
             />
           </div>
           <div className="form-group input-radio">
@@ -66,14 +80,23 @@ const ContactForm = () => {
               id="agreeToTerms"
               {...register("agreeToTerms", { required: true })}
             />
-            <label htmlFor="terms">
+
+            <label htmlFor="agreeToTerms">
               By submitting this form, I agree to the collection of my personal
               information
             </label>
           </div>
+          {errors.agreeToTerms && (
+            <ErrorText>Please agree to the terms</ErrorText>
+          )}
           <div className="form-group mb-0">
             <button type="submit" className="theme-btn">
-              Book a Consultation <i className="far fa-arrow-right" />
+              {isPending ? (
+                <Spinner animation="border" />
+              ) : (
+                <span>Book a Consultation</span>
+              )}
+              {/* Book a Consultation <i className="far fa-arrow-right" /> */}
             </button>
           </div>
         </form>
