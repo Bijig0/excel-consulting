@@ -1,6 +1,6 @@
 "use client";
 import { useState, useTransition } from "react";
-import { Spinner } from "react-bootstrap";
+import { Alert, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Resend } from "resend";
 import ErrorText from "./ErrorText";
@@ -53,7 +53,9 @@ const ContactForm = () => {
               placeholder="Your Name"
               {...register("name", { required: true })}
             />
-            {errors.name && <ErrorText>Please enter your Name</ErrorText>}
+            {errors.name && (
+              <ErrorText>Please enter your representative's name</ErrorText>
+            )}
           </div>
           <div className="form-group">
             <input
@@ -62,7 +64,9 @@ const ContactForm = () => {
               placeholder="Email Address"
               {...register("email", { required: true })}
             />
-            {errors.email && <ErrorText>Please enter your Email</ErrorText>}
+            {errors.email && (
+              <ErrorText>Please enter your business email</ErrorText>
+            )}
           </div>
           <div className="form-group">
             <textarea
@@ -87,7 +91,9 @@ const ContactForm = () => {
             </label>
           </div>
           {errors.agreeToTerms && (
-            <ErrorText>Please agree to the terms</ErrorText>
+            <ErrorText>
+              Please agree to the terms to submit a consultation request
+            </ErrorText>
           )}
           <div className="form-group mb-0">
             <button type="submit" className="theme-btn">
@@ -99,6 +105,28 @@ const ContactForm = () => {
               {/* Book a Consultation <i className="far fa-arrow-right" /> */}
             </button>
           </div>
+
+          {sendEmailResponse?.data && (
+            <Alert
+              key={"success"}
+              variant={"success"}
+              style={{ marginTop: "24px" }}
+            >
+              Message sent successfully! One of our representatives will be in
+              touch with you within 24 hours!
+            </Alert>
+          )}
+          {sendEmailResponse?.error && (
+            <Alert
+              key={"danger"}
+              variant={"danger"}
+              style={{ marginTop: "24px" }}
+            >
+              Something went wrong! Please send us an email admin@swiftqu.com or
+              give us a call at +61 403 057 369
+              {sendEmailResponse.error.message}
+            </Alert>
+          )}
         </form>
       </div>
     </div>
