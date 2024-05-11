@@ -10,28 +10,133 @@ const page = () => {
     <AkpagerLayout footer={5} header={5} bodyClass={"home-five"} onePage>
       {" "}
       {/* Hero area start */}
-      <section id="home" className="hero-area-five py-130 rpy-100 rel z-1">
-        <div className="container">
-          <div className="hero-content style-five text-center">
-            <span className="subtitle-one mb-20">
+      <section
+        id="home"
+        style={{ paddingTop: "80px" }}
+        className="hero-area-five pb-130 rpy-100 rel z-1"
+      >
+        <div style={{ display: "flex" }} className="container">
+          <div
+            style={{
+              flex: "5 1 0",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+            }}
+            className="hero-content style-five text-center"
+          >
+            {/* <span style={{ textAlign: "left" }} className="subtitle-one">
               <i className="fas fa-rocket-launch" /> Excel Automations And
               Analysis
-            </span>
-            <h1 style={{ textWrap: "balance" }}>
+            </span> */}
+            <h1
+              style={{
+                textWrap: "balance",
+                textAlign: "left",
+                marginBottom: 0,
+              }}
+            >
               Excel Experts To Solve Your Business Needs
             </h1>
-            <div className="row justify-content-center pt-5 rpt-0 pb-25">
+            <div style={{ marginBlock: "16px" }} />
+            <div className="row justify-content-start pb-25">
               <div className="col-xl-7 col-lg-9">
-                <p>
+                <p style={{ textAlign: "left" }}>
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                   accusantium doloremque laudantium, totam rem aperiam eaque
                   quae abillo inventore veritatis
                 </p>
               </div>
             </div>
-            <Link href="contact" className="theme-btn">
-              Book a consultation <i className="far fa-arrow-right" />
-            </Link>
+            {/* <Divider /> */}
+            <div
+              style={{
+                backgroundColor: "#08c16a",
+                display: "block",
+                width: "75%",
+                height: "1px",
+              }}
+            ></div>
+            <div className="clients-reviews">
+              <div className="clients">
+                <h6>Happy Customer</h6>
+                <div className="images">
+                  <img src="assets/images/hero/client1.png" alt="Client" />
+                  <img src="assets/images/hero/client2.png" alt="Client" />
+                  <img src="assets/images/hero/client3.png" alt="Client" />
+                  <img src="assets/images/hero/client4.png" alt="Client" />
+                </div>
+              </div>
+              <div className="reviews">
+                <h6>4.7/5 on TrustPilot</h6>
+                <div className="ratting">
+                  <i className="fas fa-star" />
+                  <i className="fas fa-star" />
+                  <i className="fas fa-star" />
+                  <i className="fas fa-star" />
+                  <i className="fas fa-star" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style={{ flex: "4 1 0" }} className="col-lg-6 rel z-1">
+            <div className="hero-form">
+              <h4>Sign Up Now</h4>
+              <p>Ready to Register Our Landsio Services</p>
+              <form action="#" name="contactForm" method="post">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="form-control"
+                    defaultValue=""
+                    placeholder="Your Name"
+                    required=""
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="form-control"
+                    defaultValue=""
+                    placeholder="Email Address"
+                    required=""
+                  />
+                </div>
+                <div className="form-group">
+                  <input
+                    type="text"
+                    id="phone_number"
+                    name="phone_number"
+                    className="form-control"
+                    defaultValue=""
+                    placeholder="Phone Number"
+                    required=""
+                  />
+                </div>
+                <div className="form-group input-radio">
+                  <input
+                    type="radio"
+                    id="terms"
+                    name="terms"
+                    defaultValue="terms"
+                    required=""
+                  />
+                  <label htmlFor="terms">
+                    I’ve Read and agreed to{" "}
+                    <a href="#">Terms &amp; Conditions</a>
+                  </label>
+                </div>
+                <div className="form-group mb-0">
+                  <button type="submit" className="theme-btn">
+                    Register <i className="far fa-arrow-right" />
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
         <div className="hero-bg-wave-shapes">
@@ -617,7 +722,7 @@ const page = () => {
             <span className="subtitle-one style-two mb-20">
               <i className="fas fa-rocket-launch" /> Customer Feedback
             </span>
-            <h2>We’ve 1253+ Customer Feedback</h2>
+            <h2>Here's what our partners say</h2>
           </div>
           <div className="row gap-50">
             <div className="col-lg-6">
@@ -634,8 +739,13 @@ const page = () => {
                   </div>
                 </div>
                 <div className="author-text">
-                  At vero eoset accusamus iusto dignissimos ducimus blanditiis
-                  praesentium voluptatume delenitie corruptie dolores molestias
+                  As the CFO of a mid-sized manufacturing company, I have been
+                  continually impressed by the services offered by [Company
+                  Name]. Their team helped streamlined our financial reporting
+                  processes and implemented advanced forecasting models that
+                  have significantly improved our budgeting accuracy. They are
+                  an invaluable partner to us and we highly recommend their
+                  services
                 </div>
                 <div className="testi-footer">
                   <div className="ratting">
@@ -665,8 +775,14 @@ const page = () => {
                   </div>
                 </div>
                 <div className="author-text">
-                  At vero eoset accusamus iusto dignissimos ducimus blanditiis
-                  praesentium voluptatume delenitie corruptie dolores molestias
+                  I run a small online retail business, and data management was
+                  always a challenge for us until we started working with
+                  [Company Name]. Their consultants transformed our data into
+                  clear, actionable insights that have directly contributed to
+                  an increase in our sales. Their custom dashboard lets us track
+                  our key performance indicators in real-time. I'm grateful for
+                  their expertise and highly recommend their services to any
+                  business working with Excel
                 </div>
                 <div className="testi-footer">
                   <div className="ratting">
@@ -764,76 +880,9 @@ const page = () => {
       </section>
       {/* FeedbackArea End */}
       {/* Work Step Area Five Start */}
-      <section
-        id="work-step"
-        className="work-step-area-five pt-120 rpt-100 pb-100 rpb-80 rel z-1"
-      >
-        <div className="container">
-          <div className="row justify-content-between">
-            <div className="col-xl-5 col-lg-6">
-              <div className="about-content-five mt-10 mb-20 rmb-55">
-                <div className="section-title mb-30">
-                  <span className="subtitle-one style-two mb-20">
-                    <i className="fas fa-rocket-launch" /> How to get Started
-                  </span>
-                  <h2>Getting started takes less than 2 minutes</h2>
-                </div>
-                <ul className="icon-list mt-40 mb-40">
-                  <li>
-                    <i className="fal fa-arrow-right" /> No credit card required
-                  </li>
-                </ul>
-                <Link href="about" className="theme-btn">
-                  Learn More <i className="far fa-arrow-right" />
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="numbered-boxes">
-                <div className="numbered-box style-two">
-                  <div className="number">1</div>
-                  <div className="content">
-                    <h5>Connect Your Account</h5>
-                    <p>
-                      Praesentium voluptatum deleniti atque corrupti quos
-                      dolores quas molestias exceptur occaecatie
-                    </p>
-                  </div>
-                </div>
-                <div className="numbered-box style-two">
-                  <div className="number">2</div>
-                  <div className="content">
-                    <h5>View Data Analysis</h5>
-                    <p>
-                      Praesentium voluptatum deleniti atque corrupti quos
-                      dolores quas molestias exceptur occaecatie
-                    </p>
-                  </div>
-                </div>
-                <div className="numbered-box style-two">
-                  <div className="number">3</div>
-                  <div className="content">
-                    <h5>Get Your Final Result</h5>
-                    <p>
-                      Praesentium voluptatum deleniti atque corrupti quos
-                      dolores quas molestias exceptur occaecatie
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="bg-lines">
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-      </section>
       {/* Work Step Area End */}
       {/* Footer Top CTA Area Start */}
-      <section className="footer-top-cta-area">
+      {/* <section className="footer-top-cta-area">
         <div className="container container-1500">
           <div
             className="footer-top-cta-wrap bgc-primary"
@@ -863,6 +912,159 @@ const page = () => {
                     Get Started Free <i className="far fa-arrow-right" />
                   </Link>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      <section className="contact-page py-130 rpy-100">
+        <div className="container">
+          <div className="row gap-100 align-items-center">
+            <div className="col-lg-5">
+              <div className="contact-info-part">
+                <div className="section-title mb-50">
+                  <h2>Feel Free to Contact Us, Get In Touch</h2>
+                  <p>
+                    We're here to assist you in any way we can. Whether you have
+                    questions, feedback, or just want to say hello
+                  </p>
+                </div>
+                <div className="contact-info-item style-two">
+                  <div className="icon">
+                    <i className="fal fa-map-marker-alt" />
+                  </div>
+                  <div className="content">
+                    <span className="title">Location</span>
+                    <span className="text">
+                      55 Main Street, 2nd block Melbourne, Australia
+                    </span>
+                  </div>
+                </div>
+                <div className="contact-info-item style-two">
+                  <div className="icon">
+                    <i className="far fa-envelope-open-text" />
+                  </div>
+                  <div className="content">
+                    <span className="title">Email Address</span>
+                    <span className="text">
+                      <a href="mailto:support@gmail.com">support@gmail.com</a>
+                    </span>
+                  </div>
+                </div>
+                <div className="contact-info-item style-two">
+                  <div className="icon">
+                    <i className="fal fa-phone-volume" />
+                  </div>
+                  <div className="content">
+                    <span className="title">Make A Call</span>
+                    <span className="text">
+                      <a href="calto:+000(123)456889">+000 (123) 456 889</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-7">
+              <div
+                className="contact-form br-10 bgc-lighter rmt-60"
+                name="contact-form"
+              >
+                <form
+                  id="contactForm"
+                  className="contactForm"
+                  name="contactForm"
+                  action="assets/php/form-process.php"
+                  method="post"
+                >
+                  <img
+                    className="shape-one"
+                    src="assets/images/shapes/star-yellow-shape.png"
+                    alt="Star Shape"
+                  />
+                  <img
+                    className="shape-two"
+                    src="assets/images/shapes/star-black-shape.png"
+                    alt="Star Shape"
+                  />
+                  <h5>Send Us Message</h5>
+                  <p>
+                    Questions or you would just like to say hello, contact us.
+                  </p>
+                  <div className="row mt-30">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="name">Full Name</label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          className="form-control"
+                          defaultValue=""
+                          placeholder="Somaia D. Silva"
+                          required=""
+                          data-error="Please enter your Name"
+                        />
+                        <div className="help-block with-errors" />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          className="form-control"
+                          defaultValue=""
+                          placeholder="support@gmail.com"
+                          required=""
+                          data-error="Please enter your Email"
+                        />
+                        <div className="help-block with-errors" />
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="form-group">
+                        <label htmlFor="subject">Subject</label>
+                        <input
+                          type="text"
+                          id="subject"
+                          name="subject"
+                          className="form-control"
+                          defaultValue=""
+                          placeholder="I like to discussed"
+                          required=""
+                          data-error="Please enter your Subject"
+                        />
+                        <div className="help-block with-errors" />
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="form-group">
+                        <label htmlFor="message">Message</label>
+                        <textarea
+                          name="message"
+                          id="message"
+                          className="form-control"
+                          rows={4}
+                          placeholder="Write Message"
+                          required=""
+                          data-error="Please enter your Message"
+                          defaultValue={""}
+                        />
+                        <div className="help-block with-errors" />
+                      </div>
+                    </div>
+                    <div className="col-md-12">
+                      <div className="form-group mb-0">
+                        <button type="submit" className="theme-btn">
+                          Send Us Message <i className="far fa-arrow-right" />
+                        </button>
+                        <div id="msgSubmit" className="hidden" />
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
