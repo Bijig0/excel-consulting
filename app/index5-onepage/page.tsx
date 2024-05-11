@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Tab } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 import Slider from "react-slick";
+import ContactForm from "./ContactForm";
 
 const page = () => {
   const isTabletOrBelow = useMediaQuery({ query: "(max-width: 960px)" });
@@ -47,6 +48,44 @@ const page = () => {
             <span />
             <span />
             <span />
+          </div>
+          <div
+            style={{
+              marginBlock: "32px",
+              marginInline: "auto",
+              backgroundColor: "#ccc",
+              display: "block",
+              width: "75%",
+              height: "1px",
+            }}
+          ></div>
+          <div
+            style={{ justifyContent: "space-evenly" }}
+            className="clients-reviews"
+          >
+            <div style={{ margin: 0 }} className="clients">
+              <h6>Happy Customer</h6>
+              <div className="images">
+                <img src="assets/images/hero/client1.png" alt="Client" />
+                <img src="assets/images/hero/client2.png" alt="Client" />
+                <img src="assets/images/hero/client3.png" alt="Client" />
+                <img src="assets/images/hero/client4.png" alt="Client" />
+              </div>
+            </div>
+            <div style={{ margin: 0 }} className="reviews">
+              <h6>4.7/5 on TrustPilot</h6>
+              <div className="ratting">
+                <i className="fas fa-star" />
+                <i className="fas fa-star" />
+                <i className="fas fa-star" />
+                <i className="fas fa-star" />
+                <i className="fas fa-star" />
+              </div>
+            </div>
+          </div>
+          <div style={{ marginBlock: "52px" }} />
+          <div style={{ paddingInline: "28px" }}>
+            <ContactForm />
           </div>
         </section>
       ) : (
@@ -91,7 +130,7 @@ const page = () => {
               {/* <Divider /> */}
               <div
                 style={{
-                  backgroundColor: "#08c16a",
+                  backgroundColor: "#ccc",
                   display: "block",
                   width: "75%",
                   height: "1px",
@@ -119,65 +158,7 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div style={{ flex: "4 1 0" }} className="col-lg-6 rel z-1">
-              <div className="hero-form">
-                <h4>Sign Up Now</h4>
-                <p>Ready to Register Our Landsio Services</p>
-                <form action="#" name="contactForm" method="post">
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="form-control"
-                      defaultValue=""
-                      placeholder="Your Name"
-                      required=""
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="form-control"
-                      defaultValue=""
-                      placeholder="Email Address"
-                      required=""
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      id="phone_number"
-                      name="phone_number"
-                      className="form-control"
-                      defaultValue=""
-                      placeholder="Phone Number"
-                      required=""
-                    />
-                  </div>
-                  <div className="form-group input-radio">
-                    <input
-                      type="radio"
-                      id="terms"
-                      name="terms"
-                      defaultValue="terms"
-                      required=""
-                    />
-                    <label htmlFor="terms">
-                      I’ve Read and agreed to{" "}
-                      <a href="#">Terms &amp; Conditions</a>
-                    </label>
-                  </div>
-                  <div className="form-group mb-0">
-                    <button type="submit" className="theme-btn">
-                      Register <i className="far fa-arrow-right" />
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <ContactForm />
           </div>
           <div className="hero-bg-wave-shapes">
             <span className="circle" />
