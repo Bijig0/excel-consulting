@@ -29,9 +29,9 @@ const page = () => {
               <div className="row justify-content-center pt-5 rpt-0 pb-25">
                 <div className="col-xl-7 col-lg-9">
                   <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam eaque quae abillo inventore veritatis
+                    SLK Automations powers business spreadsheets through expert
+                    consulting on spreadsheet needs from data visualizations and
+                    analysis, to custom macros and formulas
                   </p>
                 </div>
               </div>
@@ -121,9 +121,9 @@ const page = () => {
               <div className="row justify-content-start pb-25">
                 <div className="col-xl-7 col-lg-9">
                   <p style={{ textAlign: "left" }}>
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam eaque quae abillo inventore veritatis
+                    SLK Automations powers business spreadsheets through expert
+                    consulting on spreadsheet needs from data visualizations and
+                    analysis, to custom macros and formulas
                   </p>
                 </div>
               </div>
@@ -286,8 +286,10 @@ const page = () => {
                     </Link>
                   </h5>
                   <p>
-                    Sed uterspiciatis unde omnis natus error voluptatem
-                    accusantium doloremque ways laudantium totam aperiam eaque
+                    Our expert analysts use advanced data visualization
+                    techniques and technology, including <strong>VBA</strong>,{" "}
+                    <strong>Power BI</strong> and <strong> Python</strong>. Your
+                    financial reports and predictions are in good hands
                   </p>
                 </div>
               </div>
@@ -306,8 +308,10 @@ const page = () => {
                     <Link href="service-details">Process Automation</Link>
                   </h5>
                   <p>
-                    Quis autem vel eumiure reprehenderit qui in ea voluptate
-                    velit esse quam molestiae consequatur vel illum qui dolorem
+                    Our team work with{" "}
+                    <strong>your existing spreadsheets</strong>
+                    to automate <strong>manual</strong> workflows through{" "}
+                    <strong>macros</strong> and other techniques
                   </p>
                 </div>
               </div>
@@ -325,8 +329,10 @@ const page = () => {
                     <Link href="service-details">And More</Link>
                   </h5>
                   <p>
-                    To take a trivial example, which of us ever undertakes
-                    laborious physical exercise, except to obtain some advantage
+                    We also offer <strong>dashboard visualizations</strong>,{" "}
+                    <strong>data manipulation</strong> services,{" "}
+                    <strong>third party integrations</strong> and more. Book a
+                    consultation to let us know your needs!
                   </p>
                 </div>
               </div>
@@ -559,10 +565,11 @@ const page = () => {
                     workflows
                   </li>
                   <li>
-                    <i className="fal fa-check" /> Optimize your automations
+                    <i className="fal fa-check" /> Optimize your current
+                    automations
                   </li>
                 </ul>
-                <Link href="about" className="theme-btn">
+                <Link href="/#home" className="theme-btn">
                   Learn More <i className="far fa-arrow-right" />
                 </Link>
               </div>

@@ -327,9 +327,9 @@ const Header5 = ({ onePage }) => {
                 <Link href="/">
                   <img
                     style={{
-                      height: "100px",
+                      height: "48px",
                     }}
-                    src="assets/images/logos/logo5.png"
+                    src="assets/images/logos/logo5-side.png"
                     alt="Logo"
                     title="Logo"
                   />
