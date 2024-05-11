@@ -10698,7 +10698,8 @@ a.theme-btn.style-four:hover {
 }
 @media only screen and (max-width: 575px) {
   .header-top .top-right {
-    display: none;
+    display: block;
+    margin-inline: auto;
   }
 }
 .header-top .top-right .social-icons a i {

@@ -663,7 +663,7 @@ const Footer5 = () => {
             </Link>
           </div>
           <h3>Ready to Power Your Spreadsheets?</h3>
-          <Link href="/#home" className="theme-btn style-two">
+          <Link href="/#contact" className="theme-btn style-two">
             Book a consultation <i className="far fa-arrow-right" />
           </Link>
         </div>

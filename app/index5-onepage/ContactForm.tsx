@@ -37,7 +37,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div style={{ flex: "4 1 0" }} className="col-lg-6 rel z-1">
+    <div id="contact" style={{ flex: "4 1 0" }} className="col-lg-6 rel z-1">
       <div style={{ paddingBlock: "52px" }} className="hero-form">
         <h4>Start supercharging your spreadsheets</h4>
         <div style={{ marginBlock: "24px" }} />

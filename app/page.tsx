@@ -35,7 +35,7 @@ const page = () => {
                   </p>
                 </div>
               </div>
-              <Link href="contact" className="theme-btn">
+              <Link href="/#contact" className="theme-btn">
                 Book a consultation <i className="far fa-arrow-right" />
               </Link>
             </div>
@@ -766,11 +766,12 @@ const page = () => {
                 </div>
                 <div className="author-text">
                   As the CFO of a mid-sized manufacturing company, I have been
-                  continually impressed by the services offered by Brady and SLK Automations. Their team helped streamlined our financial reporting
-                  processes and implemented advanced forecasting models that
-                  have significantly improved our budgeting accuracy. They are
-                  an invaluable partner to us and we highly recommend their
-                  services
+                  continually impressed by the services offered by Brady and SLK
+                  Automations. Their team helped streamlined our financial
+                  reporting processes and implemented advanced forecasting
+                  models that have significantly improved our budgeting
+                  accuracy. They are an invaluable partner to us and we highly
+                  recommend their services
                 </div>
                 <div className="testi-footer">
                   <div className="ratting">
@@ -801,10 +802,10 @@ const page = () => {
                 </div>
                 <div className="author-text">
                   I run a small online retail business, and data management was
-                  always a challenge for us until we started working with
-                  John from SLK. Their consultants transformed our data into
-                  clear, actionable insights that have directly contributed to
-                  an increase in our sales. Their custom dashboard lets us track
+                  always a challenge for us until we started working with John
+                  from SLK. Their consultants transformed our data into clear,
+                  actionable insights that have directly contributed to an
+                  increase in our sales. Their custom dashboard lets us track
                   our key performance indicators in real-time. I'm grateful for
                   their expertise and highly recommend their services to any
                   business working with Excel

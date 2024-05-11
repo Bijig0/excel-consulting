@@ -3,6 +3,7 @@ import useClickOutside from "@/utility/useClickOutside";
 import Link from "next/link";
 import { Fragment, useState } from "react";
 import { Accordion } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
 
 const Header = ({ header, onePage }) => {
   switch (header) {
@@ -97,6 +98,7 @@ const Header2 = ({ onePage }) => {
     { id: 5, href: "testimonials", title: "testimonials" },
     { id: 6, href: "blog", title: "blog" },
   ];
+
   return (
     <header className="main-header no-border">
       {/*Header-Upper*/}
@@ -275,6 +277,9 @@ const Header5 = ({ onePage }) => {
     { id: 2, href: "tooling", title: "tooling" },
     { id: 5, href: "testimonials", title: "testimonials" },
   ];
+
+  const isPhoneOrBelow = useMediaQuery({ query: "(max-width: 337px)" });
+
   return (
     <header className="main-header no-border">
       {/*Header-Top*/}
@@ -286,9 +291,8 @@ const Header5 = ({ onePage }) => {
                 <div className="top-left text-center text-lg-start">
                   <ul>
                     <li>
-                      <i className="flaticon-star" />{" "}
-                      <span>Welcome to Our Saas Landing Akpager,</span> Have Any
-                      Question? <Link href="contact">Contact Us</Link>
+                      <i className="flaticon-star" /> Have Any Question?{" "}
+                      <Link href="/#contact">Contact Us</Link>
                     </li>
                   </ul>
                 </div>
@@ -296,20 +300,26 @@ const Header5 = ({ onePage }) => {
               <div className="col-xl-6 col-lg-7">
                 <div className="top-right text-center text-lg-end">
                   <ul>
-                    <li>
+                    <li
+                      style={
+                        isPhoneOrBelow
+                          ? {
+                              alignSelf: "center",
+                              marginInline: "auto",
+                            }
+                          : null
+                      }
+                    >
                       <i className="fas fa-envelope" />{" "}
-                      <a href="mailto:support@gmail.com">support@gmail.com</a>
+                      <a href="mailto:quidquoltd@gmail.com">
+                        quidquoltd@gmail.com
+                      </a>
                     </li>
-                    <li>
+                    <li
+                      style={isPhoneOrBelow ? { marginInline: "auto" } : null}
+                    >
                       <i className="fas fa-phone" />{" "}
-                      <a href="callto:+000(123)45688">+000 (123) 456 88</a>
-                    </li>
-                    <li>
-                      <select name="language" id="language">
-                        <option value="English">English</option>
-                        <option value="Bengali">Bengali</option>
-                        <option value="Arabic">Arabic</option>
-                      </select>
+                      <a href="callto:+61 403 057 369">+61 403 057 369</a>
                     </li>
                   </ul>
                 </div>
@@ -349,7 +359,7 @@ const Header5 = ({ onePage }) => {
             </div>
             {/* Menu Button */}
             <div className="menu-btns ms-lg-auto">
-              <Link href="/#home" className="theme-btn">
+              <Link href="/#contact" className="theme-btn">
                 Book a consultation <i className="far fa-arrow-right" />
               </Link>
             </div>
@@ -402,8 +412,9 @@ const Header6 = ({ onePage }) => {
                         </div>
                       </li>
                       <li>
-                        <a href="mailto:support@gmail.com">
-                          support@gmail.com <i className="fal fa-arrow-right" />
+                        <a href="mailto:quidquoltd@gmail.com">
+                          quidquoltd@gmail.com{" "}
+                          <i className="fal fa-arrow-right" />
                         </a>
                       </li>
                     </ul>
