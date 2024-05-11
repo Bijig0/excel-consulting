@@ -398,6 +398,55 @@ const page = () => {
         </div>
       </section>
       {/* Tab Area End */}
+      <section className="about-area-five pt-120 rpb-100 rel z-1">
+        <div className="container">
+          <div className="row gap-40 align-items-center">
+            <div className="col-lg-6">
+              <div className="about-images-five rmb-55">
+                <img src="assets/images/about/about-five1.png" alt="About" />
+                <img src="assets/images/about/about-five2.png" alt="About" />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="about-content-five mt-40 rmt-15">
+                <div className="section-title mb-30">
+                  <span className="subtitle-one style-two mb-20">
+                    {/* <i className="fas fa-rocket-launch" /> Build Better products */}
+                  </span>
+                  <h2>Power your workflows</h2>
+                </div>
+                <p>
+                  Automate your manual workflows, and speed up your existing
+                  processes! Our team of expert analysts are experienced with
+                  VBA, macros, custom formulas and more Excel features to help
+                  automate your workflows. Or, if you have existing automations,
+                  we can even work with your Excel team to help make them more
+                  effective and efficient!
+                </p>
+                <ul className="icon-list style-two mt-40 mb-40">
+                  <li>
+                    <i className="fal fa-check" /> Automate your manual
+                    workflows
+                  </li>
+                  <li>
+                    <i className="fal fa-check" /> Optimize your existing
+                    automations
+                  </li>
+                </ul>
+                <Link href="about" className="theme-btn">
+                  Learn More <i className="far fa-arrow-right" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-lines">
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+      </section>
       {/* Feature box Area Start */}
       <section
         id="services"
