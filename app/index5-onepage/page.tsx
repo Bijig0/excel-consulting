@@ -14,10 +14,12 @@ const page = () => {
         <div className="container">
           <div className="hero-content style-five text-center">
             <span className="subtitle-one mb-20">
-              <i className="fas fa-rocket-launch" /> Analytics you’ll enjoy
-              using
+              <i className="fas fa-rocket-launch" /> Excel Automations And
+              Analysis
             </span>
-            <h1>Only Customer Communication platform you'll ever need</h1>
+            <h1 style={{ textWrap: "balance" }}>
+              Excel Experts To Solve Your Business Needs
+            </h1>
             <div className="row justify-content-center pt-5 rpt-0 pb-25">
               <div className="col-xl-7 col-lg-9">
                 <p>
@@ -43,13 +45,6 @@ const page = () => {
         </div>
       </section>
       {/* Hero area End */}
-      {/* Hero Image Part End */}
-      <div className="hero-image-area rel z-1">
-        <div className="container container-1370">
-          <img src="assets/images/hero/hero-five.png" alt="Hero" />
-        </div>
-      </div>
-      {/* Hero Image Part End */}
       {/* Client Logos Area Start */}
       <section className="client-logo-area-five pt-125 rpt-105 rel z-1">
         <div className="container">
