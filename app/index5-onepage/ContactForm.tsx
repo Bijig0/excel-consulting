@@ -80,6 +80,7 @@ const ContactForm = () => {
           </div>
           <div className="form-group input-radio">
             <input
+              style={{ padding: 0 }}
               type="radio"
               id="agreeToTerms"
               {...register("agreeToTerms", { required: true })}
