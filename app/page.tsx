@@ -20,10 +20,11 @@ const page = () => {
           <div className="container">
             <div className="hero-content style-five text-center">
               <span className="subtitle-one mb-20">
-                <i className="fas fa-rocket-launch" /> Excel Spreadsheet Consulting
+                <i className="fas fa-rocket-launch" /> Excel Spreadsheet
+                Consulting
               </span>
               <h1 style={{ textWrap: "balance" }}>
-                Excel Consultants To Solve Your Business Needs
+                Excel Experts to Solve Your Business Needs
               </h1>
               <div className="row justify-content-center pt-5 rpt-0 pb-25">
                 <div className="col-xl-7 col-lg-9">
@@ -114,7 +115,7 @@ const page = () => {
                   marginBottom: 0,
                 }}
               >
-                Excel Experts To Solve Your Business Needs
+                Excel Consulting To Solve Your Spreadsheet Needs
               </h1>
               <div style={{ marginBlock: "16px" }} />
               <div className="row justify-content-start pb-25">
